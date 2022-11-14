@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Accord.Math" Version="3.8.0" />
+    <PackageReference Include="Accord.Statistics" Version="3.8.0" />
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Mateusz\.nuget\packages\accord\3.8.0\build\Accord.dll.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Mateusz\.nuget\packages\accord\3.8.0\build\Accord.dll.config" />
+  </ItemGroup>
+
+</Project>
