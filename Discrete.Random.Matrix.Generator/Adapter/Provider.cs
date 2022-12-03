@@ -8,9 +8,10 @@ namespace Discrete.Random.Matrix.Generator.Adapter
         {
             INamedAdapter accord = new AccordMathAdaptee();
             INamedAdapter mathnet = new MathNETAdaptee();
+            //INamedAdapter dew = new DewMathAdaptee();
 
             var provider = new ProviderConfigurator()
-                .WithAdaptees(accord, mathnet)
+                .WithAdaptees(accord, mathnet) //, dew)
                 .Configure();
 
             return provider;
