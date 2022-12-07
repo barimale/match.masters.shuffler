@@ -9,7 +9,6 @@
   <ItemGroup>
     <PackageReference Include="Accord.Math" Version="3.8.0" />
     <PackageReference Include="Accord.Statistics" Version="3.8.0" />
-    <PackageReference Include="Dew.Math.Core" Version="6.0.8" />
     <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
   </ItemGroup>
 
