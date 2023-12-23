@@ -23,7 +23,7 @@ namespace Random.Matrix.Generator
             //given
             var amountOfColors = upper - lower + 1;
             var provider = ServiceProvider.GetProvider();
-            var allAdaptees = provider.GetRegisterAdapteesName();
+            var allAdaptees = provider.GetRegisterAdaptersName();
             var firstOne = allAdaptees.First();
 
             //when

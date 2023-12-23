@@ -8,10 +8,9 @@ namespace Discrete.Random.Matrix.Generator.Adapter
         {
             INamedAdapter accord = new AccordMathAdaptee();
             INamedAdapter mathnet = new MathNETAdaptee();
-            //INamedAdapter dew = new DewMathAdaptee();
 
             var provider = new ProviderConfigurator()
-                .WithAdaptees(accord, mathnet) //, dew)
+                .WithAdaptees(accord, mathnet)
                 .Configure();
 
             return provider;
@@ -55,7 +54,7 @@ namespace Discrete.Random.Matrix.Generator.Adapter
                     this._adaptees = adaptees;
                 } 
 
-                public IEnumerable<string> GetRegisterAdapteesName()
+                public IEnumerable<string> GetRegisterAdaptersName()
                 {
                     return this._adaptees.Select(p => p.GetUniqueName());
                 }
@@ -70,7 +69,7 @@ namespace Discrete.Random.Matrix.Generator.Adapter
                 public async Task<Tuple<double, double, string, int[]>> ExecuteUniformByNameAsync(string name, int lower, int upper, int n, int m, bool isStrict)
                 {
                     return await this._adaptees
-                    .First(p => p.GetUniqueName() == name)
+                        .First(p => p.GetUniqueName() == name)
                         .ExecuteUniformAsync(lower, upper, n, m, isStrict);
                 }
             }

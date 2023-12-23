@@ -28,7 +28,7 @@ for (int i = 0; i < masses.Length; i++)
 }
 
 var provider = ServiceProvider.GetProvider();
-var allAdaptees = provider.GetRegisterAdapteesName();
+var allAdaptees = provider.GetRegisterAdaptersName();
 
 foreach (var adapteeName in allAdaptees)
 {
