@@ -2,12 +2,12 @@
 
 namespace Discrete.Random.Matrix.Generator.Adapter
 {
-    internal class MathNETAdaptee : INamedAdapter
+    internal class MathNETAdapter : INamedAdapter
     {
         private const string NAME = "MathNet.Numerics";
         private readonly IDiscreteUniformDistribution _engine;
 
-        public MathNETAdaptee()
+        public MathNETAdapter()
         {
             _engine = new DiscreteUniformDistributionMathNet();
         }

@@ -2,12 +2,12 @@
 
 namespace Discrete.Random.Matrix.Generator.Adapter
 {
-    internal class AccordMathAdaptee: INamedAdapter
+    internal class AccordMathAdapter: INamedAdapter
     {
         private const string NAME = "Accord.Math";
         private readonly IDiscreteUniformDistribution _engine;
 
-        public AccordMathAdaptee()
+        public AccordMathAdapter()
         {
             _engine = new DiscreteUniformAccordMath();
         }
