@@ -6,3 +6,8 @@ Happy allows to have maximum 2 colours in a row/column, as the strict mode does 
 
 # Example
 ![example.png](./results/example.png)
+
+# Original game
+```
+https://www.candivore.io/games/match-masters/
+```
