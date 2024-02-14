@@ -1,4 +1,3 @@
-using Discrete.Random.Matrix.Generator;
 using Discrete.Random.Matrix.Generator.Adapter;
 using Discrete.Random.Matrix.Generator.Utilities;
 using Xunit.Abstractions;
