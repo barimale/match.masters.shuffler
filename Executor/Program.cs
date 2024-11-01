@@ -8,23 +8,23 @@ var lower = 0;
 var upper = 5;
 var isStrict = true;
 var amountOfColors = upper - lower + 1;
-double[] masses = new double[amountOfColors];
+double[] weights = new double[amountOfColors];
 
-for (int i = 0; i < masses.Length; i++)
+for (int i = 0; i < weights.Length; i++)
 {
-    masses[i] = (double)(1D/ (double)amountOfColors);
+    weights[i] = (double)(1D/ (double)amountOfColors);
 }
 
 // Match Masters
 // on perpouse two weights are modified
-masses[1] = (double)(masses[1] / 3.1D);
-masses[2] = (double)(masses[2] / 3.1D);
-var rest = 1D - masses[1] - masses[2];
-for (int i = 0; i < masses.Length; i++)
+weights[1] = (double)(weights[1] / 3.1D);
+weights[2] = (double)(weights[2] / 3.1D);
+var rest = 1D - weights[1] - weights[2];
+for (int i = 0; i < weights.Length; i++)
 {
     if (i == 1 || i == 2)
         continue;
-    masses[i] = (double)(rest / (double)amountOfColors);
+    weights[i] = (double)(rest / (double)amountOfColors);
 }
 
 var provider = ServiceProvider.GetProvider();
@@ -33,7 +33,7 @@ var allAdaptees = provider.GetRegisterAdaptersName();
 foreach (var adapteeName in allAdaptees)
 {
     //when
-    var fromCategorical = await provider.ExecuteCategoricalByNameAsync(adapteeName, lower, upper, rowsAmount, columnsAmount, masses, isStrict);
+    var fromCategorical = await provider.ExecuteCategoricalByNameAsync(adapteeName, lower, upper, rowsAmount, columnsAmount, weights, isStrict);
     var fromUniform = await provider.ExecuteUniformByNameAsync(adapteeName, lower, upper, rowsAmount, columnsAmount, isStrict);
 
     //then
@@ -53,7 +53,7 @@ foreach (var adapteeName in allAdaptees)
         median.ToString(),
         false);
 
-    PrintLegend(lower, upper, masses: masses);
+    PrintLegend(lower, upper, masses: weights);
 
     PrintLineBreaks(1);
 
@@ -73,7 +73,7 @@ foreach (var adapteeName in allAdaptees)
         median2.ToString(),
         false);
 
-    PrintLegend(lower, upper, "All masses are uniformed(1/n, where n = masses count)");
+    PrintLegend(lower, upper, "All weights are uniformed(1/n, where n = weights count)");
 
     if(allAdaptees.Last() != null && allAdaptees.Last() != adapteeName) PrintLineBreaks(3);
 }
@@ -123,7 +123,7 @@ static void PrintLegend(int lower, int upper,string? additionalInfo = null, doub
     {
         var (special, color) = ColouredConsoleHelper.PrintChar(i);
         var descriptionRow = masses != null ?
-            special + " - " + i + " with mass: " + masses[i - lower].ToString()
+            special + " - " + i + " with weight: " + masses[i - lower].ToString()
             : special + " - " + i;
 
         Console.ForegroundColor = color;
