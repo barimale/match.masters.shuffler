@@ -53,7 +53,7 @@ foreach (var adapteeName in allAdaptees)
         median.ToString(),
         false);
 
-    PrintLegend(lower, upper, masses: weights);
+    PrintLegend(lower, upper, weights: weights);
 
     PrintLineBreaks(1);
 
@@ -114,7 +114,7 @@ static void DisplayResultsOf(string adapteeName, string array, List<Tuple<int, i
     }
 }
 
-static void PrintLegend(int lower, int upper,string? additionalInfo = null, double[]? masses = null)
+static void PrintLegend(int lower, int upper,string? additionalInfo = null, double[]? weights = null)
 {
     Console.ResetColor();
     Console.WriteLine(additionalInfo != null ? $"Legend({additionalInfo}):" : "Legend");
@@ -122,8 +122,8 @@ static void PrintLegend(int lower, int upper,string? additionalInfo = null, doub
     for (int i = lower; i < upper + 1; i++)
     {
         var (special, color) = ColouredConsoleHelper.PrintChar(i);
-        var descriptionRow = masses != null ?
-            special + " - " + i + " with weight: " + masses[i - lower].ToString()
+        var descriptionRow = weights != null ?
+            special + " - " + i + " with weight: " + weights[i - lower].ToString()
             : special + " - " + i;
 
         Console.ForegroundColor = color;
