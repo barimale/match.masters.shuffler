@@ -2,8 +2,8 @@
 using Discrete.Random.Matrix.Generator.Utilities;
 
 //given
-var rowsAmount = 30;
-var columnsAmount = 30;
+var rowsAmount = 7;
+var columnsAmount = 7;
 var lower = 0;
 var upper = 5;
 var isStrict = true;

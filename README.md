@@ -11,7 +11,3 @@ Happy allows to have maximum 2 colours in a row/column, as the strict mode does 
 ```
 https://www.candivore.io/games/match-masters/
 ```
-# Startup project
-```
-Executor.csproj
-```

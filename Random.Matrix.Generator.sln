@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Executor", "Executor\Executor.csproj", "{DD3D8C53-4EB7-4D79-A85F-EBB0AF3C11F3}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Random.Matrix.Generator.UT", "Random.Matrix.Generator\Random.Matrix.Generator.UT.csproj", "{FCB8002E-AAEF-43D5-A2A8-C140F06C69B2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discrete.Random.Matrix.Generator", "Discrete.Random.Matrix.Generator\Discrete.Random.Matrix.Generator.csproj", "{4F3FC5AE-B145-4709-B29E-96A4408EAEB3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Executor", "Executor\Executor.csproj", "{DD3D8C53-4EB7-4D79-A85F-EBB0AF3C11F3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F3B0D0B2-2F6A-4A88-8605-FCC7B08D5C4C}"
 	ProjectSection(SolutionItems) = preProject
