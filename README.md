@@ -5,7 +5,7 @@ Generation has two modes: strict and happy.
 Happy allows to have maximum 2 colours in a row/column, as the strict mode does not allow it.
 
 # Example
-![example.png](./results/example.png)
+![RESULT.png](./results/RESULT.png)
 
 # Original game
 ```
